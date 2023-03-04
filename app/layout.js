@@ -1,26 +1,45 @@
 import Link from "next/link"
-import "./globals.css"
+import { Urbanist } from '@next/font/google'
 import menu from "./menu.module.css"
+import "./globals.css"
+
+const urbanist = Urbanist({ subsets: ['latin'] })
 
 export const metadata = {
-  title: "Portfolio Site | Freddie Kaplan",
-  description: "Portfolio Site for Freddie Kaplan, web developer.",
+	title: "Portfolio Site | Freddie Kaplan",
+	description: "Portfolio Site for Freddie Kaplan, web developer.",
 }
 
 export default function RootLayout({ children }) {
-  return (
-    <html lang="en">
-      <body>
-        <>
-        <nav className={menu.menu}>
-          <div className={menu.menuItem}><Link href="./">Home</Link></div>
-          <div className={menu.menuItem}><Link href="./portfolio">Portfolio</Link></div>
-          <div className={menu.menuItem}><Link href="./about">About</Link></div>
-        </nav>
+	return (
+		<html lang="en">
+			<body className={urbanist.className}>
+				<>
 
-        <main>{children}</main>
-        </>
-      </body>
-    </html>
-  )
+				<nav className={menu.menu}>
+					<div className={menu.menuItem}><Link href="/">
+						Home
+						<div className={menu.menuLine}></div>
+					</Link></div>
+					<div className={menu.menuItem}><Link href="./portfolio">
+						Portfolio
+						<div className={menu.menuLine}></div>
+					</Link></div>
+					<div className={menu.menuItem}><Link href="./about">
+						About
+						<div className={menu.menuLine}></div>
+					</Link></div>
+
+					<div className={menu.menuItem}><Link href="./contact">
+						Contact
+						<div className={menu.menuLine}></div>
+					</Link></div>
+				</nav>
+
+				<main>{children}</main>
+
+				</>
+			</body>
+		</html>
+	)
 }

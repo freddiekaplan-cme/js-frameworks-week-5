@@ -1,34 +1,77 @@
 :root {
-  --font-seriff: Labrada;
+	--font-sans-seriff: Urbanist;
 }
 
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
 }
 
 html,
 body {
-  height: 100vh;
+	height: 100vh;
+	scroll-behavior: smooth
 }
 
 body {
-  background-color: #FFF;
-  color: #000;
-  font-family: var(--font-seriff);
-  height: 100%;
+	background-color: #e3e2e2;
+	color: #000;
+	font-family: var(--font-seriff);
+	height: 100%;
+	text-align: center;
+}
+
+h1 {
+	margin: 48px 0;
+}
+
+h2 {
+	margin: 24px 0;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+	color: inherit;
+	text-decoration: none;
 }
 
 .loading {
-  align-items: center;
-  display: flex;
-  height: 100vh;
-  justify-content: center;
-  width: 100vw;
+	margin-top: 76px;
+	text-align: center;
+}
+
+/* .scrollContainer {
+	background-color: bisque;
+
+	font-size: 40px;
+	height: 50px;
+	line-height: 1.2;
+	overflow: auto;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+
+	scroll-padding-bottom: 50px;
+} */
+
+.scrollContainer:target {
+	scroll-margin-top: 50px;
+}
+
+.scrollContainer::-webkit-scrollbar {
+	display: none;
+}
+
+.notFoundHeader {
+	margin: 76px 0 8px 0;
+}
+
+.notFoundLine {
+	background-color: #000;
+	height: 8px;
+	margin: 0 auto;
+	width: 60px;
+}
+
+.notFoundSubHeader {
+	margin: 24px 0 56px 0;
 }

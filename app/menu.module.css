@@ -1,9 +1,25 @@
 .menu {
+	background-color: #000;
 	display: flex;
 	flex-direction: row;
+	justify-content: space-around;
+	margin-bottom: 24px;
+	padding: 0 15vw;
 }
 
 .menuItem {
+	color: #e3e2e2;
 	padding: 24px;
-	color: aqua;
+}
+
+a .menuLine {
+	background-color: #e3e2e2;
+	height: 8px;
+	margin: 4px auto;
+	transition: all 0.4s;
+	width: 0;
+}
+
+.menuItem:hover > a .menuLine {
+	width: 40px;
 }

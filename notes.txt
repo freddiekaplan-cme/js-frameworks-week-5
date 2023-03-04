@@ -1,0 +1,15 @@
+Rulla ner lista med ord animation sluta på portfolio
+
+
+<      >
+
+html
+body
+div
+flex
+npm i
+import
+export
+npm build
+portfolio
+
