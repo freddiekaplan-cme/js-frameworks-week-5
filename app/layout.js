@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
 						Home
 						<div className={menu.menuLine}></div>
 					</Link></div>
-					<div className={menu.menuItem}><Link href="./portfolio">
+					<div className={` ${menu.menuItem} "portfolio" `}><Link href="./portfolio">
 						Portfolio
 						<div className={menu.menuLine}></div>
 					</Link></div>
