@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Urbanist } from '@next/font/google'
+import { Urbanist } from "next/font/google"
 import menu from "./menu.module.css"
 import "./globals.css"
 
