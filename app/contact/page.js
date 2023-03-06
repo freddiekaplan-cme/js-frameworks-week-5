@@ -1,6 +1,6 @@
 "use client"
 import React from "react"
-import { Formik, Form, Field } from "formik";
+import { Formik, Form, Field } from "formik"
 import form from "../form.module.css"
 
 export default function Home() {
@@ -12,35 +12,34 @@ export default function Home() {
 				initialValues={{
 					fullName: "",
 					email: "",
-					message: ""
+					message: "",
 				}}
 				onSubmit={async (values) => {
-					await new Promise((r) => setTimeout(r, 500));
-					alert(JSON.stringify(values, null, 2));
+					await new Promise((r) => setTimeout(r, 500))
+					alert(JSON.stringify(values, null, 2))
 				}}
 			>
 				<Form className={form.contactForm}>
 					<div>
 						<label htmlFor="fullName">Name</label>
-					<Field id="fullName" name="fullName" />
+						<Field id="fullName" name="fullName" />
 					</div>
 					<div>
-							<label htmlFor="email">Email</label>
-					<Field
-						id="email"
-						name="email"
-						type="email"
-					/>
+						<label htmlFor="email">Email</label>
+						<Field id="email" name="email" type="email" />
 					</div>
 					<div>
 						<label htmlFor="message">Message</label>
-					<Field name="message" as="textarea" className="form-textarea" />
+						<Field
+							name="message"
+							as="textarea"
+							className="form-textarea"
+						/>
 					</div>
-				
+
 					<button type="submit">Submit</button>
 				</Form>
 			</Formik>
-	
 		</div>
 	)
 }

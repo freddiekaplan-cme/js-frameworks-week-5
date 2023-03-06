@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export default function Home() {
 	return (
-    	<div className="page-content portfolio">
+		<div className="page-content portfolio">
 			<h1>Portfolio</h1>
 			<p>lorem ipsum dolor sit amet, consectetur adipis.</p>
 			<div>
@@ -23,6 +23,6 @@ export default function Home() {
 					//priority
 				/>
 			</div>
-    	</div>
+		</div>
 	)
 }
