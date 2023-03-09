@@ -1,10 +1,10 @@
 .menu {
-	background-color: #000;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
 	margin-bottom: 24px;
 	padding: 0 15vw;
+	background-color: #000;
 }
 
 .menuItem {
@@ -12,14 +12,58 @@
 	padding: 24px;
 }
 
-a .menuLine {
+a .menuLine,
+.menuLineForButton {
 	background-color: #e3e2e2;
 	height: 8px;
 	margin: 4px auto;
 	transition: all 0.4s;
 	width: 0;
+	position: relative;
+	z-index: 10;
 }
 
-.menuItem:hover > a .menuLine {
+.menuItem:hover > a .menuLine,
+.menuLineForButton.active {
 	width: 40px;
+}
+
+.menuButton {
+	display: none;
+}
+
+@media screen and (max-width: 600px) {
+	.menu {
+		flex-direction: column;
+		padding: 0;
+		position: absolute;
+		top: -450px;
+		transition: all 0.5s;
+		width: 100%;
+		z-index: 10;
+	}
+
+	.menuItem {
+		border-bottom: 1px solid #e3e2e2;
+		padding: 40px 0;
+		width: 100%;
+	}
+
+	a .menuLine {
+		display: none;
+	}
+
+	.menuButton {
+		align-items: center;
+		background-color: #000;
+		cursor: pointer;
+		display: flex;
+		flex-direction: column;
+		height: 96px;
+		justify-content: center;
+		position: relative;
+		width: 100%;
+		z-index: 20;
+	}
+	
 }

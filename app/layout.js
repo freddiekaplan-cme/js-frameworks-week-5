@@ -1,4 +1,6 @@
+"use client"
 import Link from "next/link"
+import { useState } from "react"
 import { Urbanist } from "next/font/google"
 import menu from "./menu.module.css"
 import "./globals.css"
@@ -10,40 +12,78 @@ export const metadata = {
 	description: "Portfolio Site for Freddie Kaplan, web developer.",
 }
 
-export default function RootLayout({ children }) {
+
+  
+  export default function RootLayout({ children }) {
+	const [activeMenu, setActiveMenu] = useState("")
+
 	return (
 		<html lang="en">
 			<body className={urbanist.className}>
 				<>
-					<nav className={menu.menu}>
+					<div className={` ${menu.menuItem} ${menu.menuButton} `}>
+						<div onClick={() => {
+							setActiveMenu(!activeMenu);
+						}}
+						className={activeMenu ? `${menu.menuActive}` : ""}
+						>
+							Menu
+							<div className={`${menu.menuLineForButton} ${activeMenu ? "active" : ""}`}></div>
+						</div>
+					</div>
+					<nav className={`${menu.menu} ${activeMenu ? "active" : ""}`}>
 						<div className={menu.menuItem}>
 							<Link href="/">
-								Home
-								<div className={menu.menuLine}></div>
+								<div onClick={() => {
+									setActiveMenu("");
+								}}
+								>
+									Home
+									<div className={menu.menuLine}></div>
+								</div>
 							</Link>
 						</div>
-						<div className={` ${menu.menuItem} "portfolio" `}>
+						<div className={menu.menuItem}>
 							<Link href="./portfolio">
-								Portfolio
-								<div className={menu.menuLine}></div>
+								<div onClick={() => {
+									setActiveMenu("");
+								}}
+								>
+									Portfolio
+									<div className={menu.menuLine}></div>
+								</div>
 							</Link>
 						</div>
 						<div className={menu.menuItem}>
 							<Link href="./about">
-								About
-								<div className={menu.menuLine}></div>
+								<div onClick={() => {
+									setActiveMenu("");
+								}}
+								>
+									About
+									<div className={menu.menuLine}></div>
+								</div>
 							</Link>
 						</div>
 
 						<div className={menu.menuItem}>
 							<Link href="./contact">
-								Contact
-								<div className={menu.menuLine}></div>
+								<div onClick={() => {
+									setActiveMenu("");
+								}}
+								>
+									Contact
+									<div className={menu.menuLine}></div>
+								</div>
 							</Link>
 						</div>
 					</nav>
 
 					<main>{children}</main>
+
+					<footer className="footer">
+						&copy; 2023 Freddie Kaplan
+					</footer>
 				</>
 			</body>
 		</html>
