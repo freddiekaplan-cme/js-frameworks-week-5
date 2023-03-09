@@ -17,6 +17,8 @@ portfolio
 npx prettier -w write /plats
 npx prettier -c check /plats
 
+..\..\..\..\..\..\..\..\..\Program Files\
+
 https://prettier.io/docs/en/options.html
 
 Glöm inte eslint!
