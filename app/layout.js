@@ -17,6 +17,15 @@ export default function RootLayout({ children }) {
 	const [doubleClick, setDoubleClick] = useState(false)
 	const [flyAway, setFlyAway] = useState(false);
 
+	const menuItemClick = () => {
+        setActiveMenu("")
+        setDoubleClick(false)
+    }
+
+	const homeClick = () => {
+		setActiveMenu("")
+		doubleClick === true ? setFlyAway(true) : setDoubleClick(true)}
+
 	return (
 		<html lang="en">
 			<body className={urbanist.className}>
@@ -34,16 +43,7 @@ export default function RootLayout({ children }) {
 					<nav className={`${menu.menu} ${activeMenu ? "active" : ""}`}>
 						<div className={`${menu.menuItem} ${flyAway ? "fly-away" : ""}`}>
 							<Link href="/">
-								<div onClick={() => {
-									setActiveMenu("")
-									if (doubleClick === true) {
-										console.log("Flyg iväg!")
-										setFlyAway(true)
-									} else {
-										setDoubleClick(true)
-									}}
-								}
-								>
+								<div onClick={homeClick}>
 									Home
 									<div className={menu.menuLine}></div>
 								</div>
@@ -51,11 +51,7 @@ export default function RootLayout({ children }) {
 						</div>
 						<div className={menu.menuItem}>
 							<Link href="./portfolio">
-								<div onClick={() => {
-									setActiveMenu("")
-									setDoubleClick(false)
-								}}
-								>
+								<div onClick={menuItemClick}>
 									Portfolio
 									<div className={menu.menuLine}></div>
 								</div>
@@ -63,11 +59,7 @@ export default function RootLayout({ children }) {
 						</div>
 						<div className={menu.menuItem}>
 							<Link href="./about">
-								<div onClick={() => {
-									setActiveMenu("")
-									setDoubleClick(false)
-								}}
-								>
+								<div onClick={menuItemClick}>
 									About
 									<div className={menu.menuLine}></div>
 								</div>
@@ -76,11 +68,7 @@ export default function RootLayout({ children }) {
 
 						<div className={menu.menuItem}>
 							<Link href="./contact">
-								<div onClick={() => {
-									setActiveMenu("")
-									setDoubleClick(false)
-								}}
-								>
+								<div onClick={menuItemClick}>
 									Contact
 									<div className={menu.menuLine}></div>
 								</div>
