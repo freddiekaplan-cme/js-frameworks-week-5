@@ -12,10 +12,10 @@ export const metadata = {
 	description: "Portfolio Site for Freddie Kaplan, web developer.",
 }
 
-
-  
-  export default function RootLayout({ children }) {
+export default function RootLayout({ children }) {
 	const [activeMenu, setActiveMenu] = useState("")
+	const [doubleClick, setDoubleClick] = useState(false)
+	const [flyAway, setFlyAway] = useState(false);
 
 	return (
 		<html lang="en">
@@ -32,11 +32,17 @@ export const metadata = {
 						</div>
 					</div>
 					<nav className={`${menu.menu} ${activeMenu ? "active" : ""}`}>
-						<div className={menu.menuItem}>
+						<div className={`${menu.menuItem} ${flyAway ? "fly-away" : ""}`}>
 							<Link href="/">
 								<div onClick={() => {
-									setActiveMenu("");
-								}}
+									setActiveMenu("")
+									if (doubleClick === true) {
+										console.log("Flyg iväg!")
+										setFlyAway(true)
+									} else {
+										setDoubleClick(true)
+									}}
+								}
 								>
 									Home
 									<div className={menu.menuLine}></div>
@@ -46,7 +52,8 @@ export const metadata = {
 						<div className={menu.menuItem}>
 							<Link href="./portfolio">
 								<div onClick={() => {
-									setActiveMenu("");
+									setActiveMenu("")
+									setDoubleClick(false)
 								}}
 								>
 									Portfolio
@@ -57,7 +64,8 @@ export const metadata = {
 						<div className={menu.menuItem}>
 							<Link href="./about">
 								<div onClick={() => {
-									setActiveMenu("");
+									setActiveMenu("")
+									setDoubleClick(false)
 								}}
 								>
 									About
@@ -69,7 +77,8 @@ export const metadata = {
 						<div className={menu.menuItem}>
 							<Link href="./contact">
 								<div onClick={() => {
-									setActiveMenu("");
+									setActiveMenu("")
+									setDoubleClick(false)
 								}}
 								>
 									Contact
