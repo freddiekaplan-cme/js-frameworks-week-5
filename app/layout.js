@@ -7,10 +7,10 @@ import "./globals.css"
 
 const urbanist = Urbanist({ subsets: ["latin"] })
 
-export const metadata = {
-	title: "Portfolio Site | Freddie Kaplan",
-	description: "Portfolio Site for Freddie Kaplan, web developer.",
-}
+// export const metadata = {
+// 	title: "Portfolio Site | Freddie Kaplan",
+// 	description: "Portfolio Site for Freddie Kaplan, web developer.",
+// }
 
 export default function RootLayout({ children }) {
 	const [activeMenu, setActiveMenu] = useState("")
