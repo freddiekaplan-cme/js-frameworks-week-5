@@ -1,3 +1,4 @@
+import React from "react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -107,7 +108,7 @@ export default function Home() {
 				<div className="card">
 					<div>
 						<h2>Random Post from Wikpedia API</h2>
-						Design from a mockup. Click the "Explore More" button to
+						Design from a mockup. Click the &quot;Explore More&quot; button to
 						replace a lot of text with random posts titles from
 						Wikpedia.
 					</div>
@@ -148,7 +149,7 @@ export default function Home() {
 						<h2>Portfolio Site</h2>
 						Multi page site made with Next.js 13. Fully responsive
 						and using some dynamic routing. What happens if you
-						click the "Home" button twice?
+						click the &quot;Home&quot; button twice?
 					</div>
 					<Link
 						className="link"

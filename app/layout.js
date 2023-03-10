@@ -1,7 +1,8 @@
 "use client"
-import { useState } from "react"
+import { React, useState } from "react"
 import { Urbanist } from "next/font/google"
 import Link from "next/link"
+import PropTypes from "prop-types"
 import menu from "./menu.module.css"
 import "./globals.css"
 
@@ -98,3 +99,7 @@ export default function RootLayout({ children }) {
 		</html>
 	)
 }
+
+RootLayout.propTypes = {
+	children: PropTypes.node.isRequired,
+  }

@@ -1,3 +1,4 @@
+import React from "react"
 import Link from "next/link"
 
 export default function Home() {
@@ -8,7 +9,7 @@ export default function Home() {
 			<div className="card">
 				<h2>Skills</h2>
 				<div>
-					I've worked with HTML5, CSS3, JavaScript and jQuery. I also
+					I&apos;ve worked with HTML5, CSS3, JavaScript and jQuery. I also
 					have experience with PHP, SQL and working with frameworks
 					like Wordpress and Bootstrap.
 				</div>
@@ -17,13 +18,13 @@ export default function Home() {
 			<div className="card">
 				<h2>Background</h2>
 				<div>
-					I was making simple websites in the late 90's but then went
+					I was making simple websites in the late 90&apos;s but then went
 					into the humanities and studied film and publishing. For the
-					last decade I've been working mainly within the library
-					world and website updates with different CMS's.
+					last decade I&apos;ve been working mainly within the library
+					world and website updates with different CMS&apos;s.
 				</div>
 				<div>
-					I am also running a business for guided tours, we're proud
+					I am also running a business for guided tours, we&apos;re proud
 					of pioneering the free walking tour concept in Stockholm in
 					2010. Since then more than 275 000 people have taken our
 					tours.
@@ -69,8 +70,8 @@ export default function Home() {
 				<h2>Hobbies and interests</h2>
 				<div>
 					Somewhat of a pop culture addict, I am into comics, film, tv
-					and music. I'm an avid player of Magic the Gathering, and
-					try to have recurring sessions of role playing games. I'm
+					and music. I&apos;m an avid player of Magic the Gathering, and
+					try to have recurring sessions of role playing games. I&apos;m
 					also into custom mechanical keyboards.
 				</div>
 			</div>
