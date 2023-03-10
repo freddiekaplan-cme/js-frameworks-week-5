@@ -102,4 +102,4 @@ export default function RootLayout({ children }) {
 
 RootLayout.propTypes = {
 	children: PropTypes.node.isRequired,
-  }
+}

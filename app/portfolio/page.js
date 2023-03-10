@@ -108,9 +108,9 @@ export default function Home() {
 				<div className="card">
 					<div>
 						<h2>Random Post from Wikpedia API</h2>
-						Design from a mockup. Click the &quot;Explore More&quot; button to
-						replace a lot of text with random posts titles from
-						Wikpedia.
+						Design from a mockup. Click the &quot;Explore More&quot;
+						button to replace a lot of text with random posts titles
+						from Wikpedia.
 					</div>
 					<Link
 						className="link"

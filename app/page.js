@@ -20,8 +20,8 @@ export default function Home() {
 					out my projects.
 				</div>
 				<div>
-					I&apos;m looking for internships for the semester starting in
-					January 2024. Got any tips for me?{" "}
+					I&apos;m looking for internships for the semester starting
+					in January 2024. Got any tips for me?{" "}
 					<Link className="link" href="./contact">
 						Shoot me an email
 					</Link>
