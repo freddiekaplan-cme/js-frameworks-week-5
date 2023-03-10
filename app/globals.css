@@ -58,7 +58,7 @@ div.active {
 input,
 textarea {
 	outline: none;
-	transition: 0.3	s;
+	transition: 0.3 s;
 	width: 100%;
 }
 
@@ -97,28 +97,27 @@ div.fly-away {
 	animation-duration: 3s;
 	animation-fill-mode: forwards;
 }
-	  
+
 @keyframes fly-away {
 	0% {
-	  transform: translate(0, 0);
+		transform: translate(0, 0);
 	}
 	20% {
-	  transform: translate(-50px, -50px);
+		transform: translate(-50px, -50px);
 	}
 	40% {
-	  transform: translate(0, 0);
+		transform: translate(0, 0);
 	}
 	60% {
-	  transform: translate(50px, 50px);
+		transform: translate(50px, 50px);
 	}
 	80% {
-	  transform: translate(0, 0);
+		transform: translate(0, 0);
 	}
 	100% {
-	  transform: translate(calc(100vw - 100px), calc(100vh - 100px));
+		transform: translate(calc(100vw - 100px), calc(100vh - 100px));
 	}
-  }
-
+}
 
 .footer {
 	align-items: center;
@@ -131,14 +130,40 @@ div.fly-away {
 }
 
 .card {
-	background: 
-		radial-gradient(circle at 100% 100%, #ffffff 0, #ffffff 2px, transparent 2px) 0% 0%/4px 4px no-repeat,
-        radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 2px, transparent 2px) 100% 0%/4px 4px no-repeat,
-        radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 2px, transparent 2px) 0% 100%/4px 4px no-repeat,
-        radial-gradient(circle at 0 0, #ffffff 0, #ffffff 2px, transparent 2px) 100% 100%/4px 4px no-repeat,
-        linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 4px) calc(100% - 8px) no-repeat,
-        linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 8px) calc(100% - 4px) no-repeat,
-        repeating-radial-gradient(at 18% 43%, #2b35ea 0%, #c10be7 58.76%, #ec1d6a 100%) 69% 63%/104% 193%;
+	background: radial-gradient(
+				circle at 100% 100%,
+				#ffffff 0,
+				#ffffff 2px,
+				transparent 2px
+			)
+			0% 0%/4px 4px no-repeat,
+		radial-gradient(
+				circle at 0 100%,
+				#ffffff 0,
+				#ffffff 2px,
+				transparent 2px
+			)
+			100% 0%/4px 4px no-repeat,
+		radial-gradient(
+				circle at 100% 0,
+				#ffffff 0,
+				#ffffff 2px,
+				transparent 2px
+			)
+			0% 100%/4px 4px no-repeat,
+		radial-gradient(circle at 0 0, #ffffff 0, #ffffff 2px, transparent 2px)
+			100% 100%/4px 4px no-repeat,
+		linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 4px)
+			calc(100% - 8px) no-repeat,
+		linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 8px)
+			calc(100% - 4px) no-repeat,
+		repeating-radial-gradient(
+				at 18% 43%,
+				#2b35ea 0%,
+				#c10be7 58.76%,
+				#ec1d6a 100%
+			)
+			69% 63%/104% 193%;
 	border-radius: 4px;
 	box-sizing: content-box;
 	margin: 26px auto;
@@ -167,6 +192,6 @@ div.card h2 {
 }
 
 .image {
-  max-width: 100%;
-  height: auto;
+	max-width: 100%;
+	height: auto;
 }

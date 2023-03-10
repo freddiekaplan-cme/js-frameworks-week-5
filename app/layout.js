@@ -16,12 +16,12 @@ export default function RootLayout({ children }) {
 	const [activeMenu, setActiveMenu] = useState("")
 	const [doubleClick, setDoubleClick] = useState(false)
 	const [flyAway, setFlyAway] = useState(false)
-	
+
 	const menuItemClick = () => {
 		setActiveMenu("")
 		setDoubleClick(false)
 	}
-	
+
 	const homeClick = () => {
 		setActiveMenu("")
 		doubleClick ? setFlyAway(true) : setDoubleClick(true)

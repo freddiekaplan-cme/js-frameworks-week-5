@@ -32,13 +32,39 @@
 }
 
 .button:hover {
-	background: 
-		radial-gradient(circle at 100% 100%, #000000 0, #000000 2px, transparent 2px) 0% 0%/4px 4px no-repeat,
-        radial-gradient(circle at 0 100%, #000000 0, #000000 2px, transparent 2px) 100% 0%/4px 4px no-repeat,
-        radial-gradient(circle at 100% 0, #000000 0, #000000 2px, transparent 2px) 0% 100%/4px 4px no-repeat,
-        radial-gradient(circle at 0 0, #000000 0, #000000 2px, transparent 2px) 100% 100%/4px 4px no-repeat,
-        linear-gradient(#000000, #000000) 50% 50%/calc(100% - 4px) calc(100% - 8px) no-repeat,
-        linear-gradient(#000000, #000000) 50% 50%/calc(100% - 8px) calc(100% - 4px) no-repeat,
-        repeating-radial-gradient(at 18% 43%, #2b35ea 0%, #c10be7 58.76%, #ec1d6a 100%) 69% 63%/104% 193%;
+	background: radial-gradient(
+				circle at 100% 100%,
+				#000000 0,
+				#000000 2px,
+				transparent 2px
+			)
+			0% 0%/4px 4px no-repeat,
+		radial-gradient(
+				circle at 0 100%,
+				#000000 0,
+				#000000 2px,
+				transparent 2px
+			)
+			100% 0%/4px 4px no-repeat,
+		radial-gradient(
+				circle at 100% 0,
+				#000000 0,
+				#000000 2px,
+				transparent 2px
+			)
+			0% 100%/4px 4px no-repeat,
+		radial-gradient(circle at 0 0, #000000 0, #000000 2px, transparent 2px)
+			100% 100%/4px 4px no-repeat,
+		linear-gradient(#000000, #000000) 50% 50% / calc(100% - 4px)
+			calc(100% - 8px) no-repeat,
+		linear-gradient(#000000, #000000) 50% 50% / calc(100% - 8px)
+			calc(100% - 4px) no-repeat,
+		repeating-radial-gradient(
+				at 18% 43%,
+				#2b35ea 0%,
+				#c10be7 58.76%,
+				#ec1d6a 100%
+			)
+			69% 63%/104% 193%;
 	box-sizing: content-box;
 }
