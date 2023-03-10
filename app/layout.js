@@ -1,7 +1,7 @@
 "use client"
-import Link from "next/link"
 import { useState } from "react"
 import { Urbanist } from "next/font/google"
+import Link from "next/link"
 import menu from "./menu.module.css"
 import "./globals.css"
 
@@ -16,15 +16,15 @@ export default function RootLayout({ children }) {
 	const [activeMenu, setActiveMenu] = useState("")
 	const [doubleClick, setDoubleClick] = useState(false)
 	const [flyAway, setFlyAway] = useState(false)
-
+	
 	const menuItemClick = () => {
 		setActiveMenu("")
 		setDoubleClick(false)
 	}
-
+	
 	const homeClick = () => {
 		setActiveMenu("")
-		doubleClick === true ? setFlyAway(true) : setDoubleClick(true)
+		doubleClick ? setFlyAway(true) : setDoubleClick(true)
 	}
 
 	return (

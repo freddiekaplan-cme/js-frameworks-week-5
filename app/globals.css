@@ -12,6 +12,7 @@ html,
 body {
 	min-height: 100%;
 	scroll-behavior: smooth;
+	overflow-y: hidden;
 }
 
 body {
@@ -85,10 +86,39 @@ textarea:focus {
 	margin: 24px 0;
 }
 
-div.fly-away {
+/* div.fly-away {
 	transform: translate(-100vw, -100vh);
 	transition: all 1s ease;
+} */
+
+div.fly-away {
+	background-color: #000;
+	animation-name: fly-away;
+	animation-duration: 3s;
+	animation-fill-mode: forwards;
 }
+	  
+@keyframes fly-away {
+	0% {
+	  transform: translate(0, 0);
+	}
+	20% {
+	  transform: translate(-50px, -50px);
+	}
+	40% {
+	  transform: translate(0, 0);
+	}
+	60% {
+	  transform: translate(50px, 50px);
+	}
+	80% {
+	  transform: translate(0, 0);
+	}
+	100% {
+	  transform: translate(calc(100vw - 100px), calc(100vh - 100px));
+	}
+  }
+
 
 .footer {
 	align-items: center;
