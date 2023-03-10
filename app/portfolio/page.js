@@ -10,7 +10,7 @@ export default function Home() {
 			<div className="portfolioPicture">
 				<div className="card">
 					<div>
-						<h2>"React Week 1: My Project"</h2>
+						<h2>React Week 1: My Project</h2>
 						Simple site with different articles, show all or one at a time.
 					</div>
 					<Link className="link" href="https://github.com/freddiekaplan-cme/js-frameworks-week-1">

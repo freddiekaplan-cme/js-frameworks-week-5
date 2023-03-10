@@ -1,17 +1,12 @@
-Rulla ner lista med ord animation sluta på portfolio
 
 
-<      >
 
-html
-body
-div
-flex
-npm i
-import
-export
-npm build
-portfolio
+eslint
+favicon
+dynamic routing projects
+Länk till "show all"?
+all project som moduler?
+
 
 
 npx prettier -w write /plats

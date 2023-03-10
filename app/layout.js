@@ -15,33 +15,45 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	const [activeMenu, setActiveMenu] = useState("")
 	const [doubleClick, setDoubleClick] = useState(false)
-	const [flyAway, setFlyAway] = useState(false);
+	const [flyAway, setFlyAway] = useState(false)
 
 	const menuItemClick = () => {
-        setActiveMenu("")
-        setDoubleClick(false)
-    }
+		setActiveMenu("")
+		setDoubleClick(false)
+	}
 
 	const homeClick = () => {
 		setActiveMenu("")
-		doubleClick === true ? setFlyAway(true) : setDoubleClick(true)}
+		doubleClick === true ? setFlyAway(true) : setDoubleClick(true)
+	}
 
 	return (
 		<html lang="en">
 			<body className={urbanist.className}>
 				<>
 					<div className={` ${menu.menuItem} ${menu.menuButton} `}>
-						<div onClick={() => {
-							setActiveMenu(!activeMenu);
-						}}
-						className={activeMenu ? `${menu.menuActive}` : ""}
+						<div
+							onClick={() => {
+								setActiveMenu(!activeMenu)
+							}}
+							className={activeMenu ? `${menu.menuActive}` : ""}
 						>
 							Menu
-							<div className={`${menu.menuLineForButton} ${activeMenu ? "active" : ""}`}></div>
+							<div
+								className={`${menu.menuLineForButton} ${
+									activeMenu ? "active" : ""
+								}`}
+							></div>
 						</div>
 					</div>
-					<nav className={`${menu.menu} ${activeMenu ? "active" : ""}`}>
-						<div className={`${menu.menuItem} ${flyAway ? "fly-away" : ""}`}>
+					<nav
+						className={`${menu.menu} ${activeMenu ? "active" : ""}`}
+					>
+						<div
+							className={`${menu.menuItem} ${
+								flyAway ? "fly-away" : ""
+							}`}
+						>
 							<Link href="/">
 								<div onClick={homeClick}>
 									Home

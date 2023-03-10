@@ -1,50 +1,65 @@
-"use client"
-import React from "react"
-import { Formik, Form, Field } from "formik"
-import form from "../form.module.css"
+import React from 'react'
+import { Formik, Form, Field } from 'formik'
+import * as Yup from 'yup'
 
-export default function Home() {
-	return (
-		<div className="page-content about">
-			<h1>Contact</h1>
+const schema = Yup.object().shape({
+  fullName: Yup.string()
+  .required('Full Name is required'),
+  email: Yup.string()
+  .email('Invalid email')
+  .required('Email is required'),
+  message: Yup.string()
+  .required('Message is required')
+})
 
-			<div className="card">
-				<div className={form.text}>
-					Get in touch with me about internships, work or anything else. 
-				</div>
-				<Formik
-					initialValues={{
-						fullName: "",
-						email: "",
-						message: "",
-					}}
-					onSubmit={async (values) => {
-						await new Promise((r) => setTimeout(r, 500))
-						alert(JSON.stringify(values, null, 2))
-					}}
-				>
-					<Form className={form.contactForm}>
-						<div>
-							<label htmlFor="fullName">Name</label><br />
-							<Field id="fullName" name="fullName" className={form.input} />
-						</div>
-						<div>
-							<label htmlFor="email">Email</label><br />
-							<Field id="email" name="email" type="email" className={form.input} />
-						</div>
-						<div>
-							<label htmlFor="message">Message</label><br />
-							<Field
-								name="message"
-								as="textarea"
-								className={`${form.input} ${form.textarea} `}
-							/>
-						</div>
+export default function Home({ data }) {
+  return (
+	<div>
+	  <h1>Contact</h1>
+	  <Formik
+		initialValues={{
+		  fullName: '',
+		  email: '',
+		  message: ''
+		}}
+		validationSchema={schema}
+		onSubmit={async (values) => {
+		  const res = await fetch('/api/form', {
+			method: 'POST',
+			headers: {
+			  'Content-Type': 'application/json'
+			},
+			body: JSON.stringify(values)
+		  })
+		  const data = await res.json()
+		  if (!res.ok) alert(data.msg)
+		  else alert('Success')
+		}}
+	  >
+		{(formik) => (
+		  <Form>
+			<label htmlFor='fullName'>Name</label>
+			<Field name='fullName' />
+			{formik.touched.fullName && formik.errors.fullName ? (
+			  <div>{formik.errors.fullName}</div>
+			) : null}
 
-						<button type="submit" className={form.button}>Submit</button>
-					</Form>
-				</Formik>
-			</div>
-		</div>
-	)
+			<label htmlFor='email'>Email</label>
+			<Field type='email' name='email' />
+			{formik.touched.email && formik.errors.email ? (
+			  <div>{formik.errors.email}</div>
+			) : null}
+
+			<label htmlFor='message'>Message</label>
+			<Field name='message' as='textarea' />
+			{formik.touched.message && formik.errors.message ? (
+			  <div>{formik.errors.message}</div>
+			) : null}
+
+			<button type='submit'>Submit</button>
+		  </Form>
+		)}
+	  </Formik>
+	</div>
+  )
 }
