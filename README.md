@@ -7,7 +7,6 @@ Simple portfolio site assignment using Next js. Easter egg: Double click on the 
 -   CSS
 -   Dynamic routing
 -   ESlint
--   Imports
 -   Next js
 -   Not found function
 -   NPM packages
